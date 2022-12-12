@@ -4,6 +4,7 @@ import argparse
 import sys, os, time
 import pdb
 import time
+import matplotlib.pyplot as plt
 
 #toto
 
@@ -57,3 +58,30 @@ if __name__ == '__main__':
                 spin.run_sim()
                 end_of_sim.value = 1 # Let other processes know that simulation stopped
                 spin.wrap_up()
+    
+    
+    vrst = -65
+    sample = spin.voltages[spin.voltages > vrst]
+
+    keep_going = True
+    N = 0
+    idx = []
+    spike_count = 0
+    while keep_going:
+        if abs(sample[N] - sample[N+1]) > 0.8*(args.vth-vrst):
+            idx.append(N+2)
+            spike_count += 1
+            if spike_count >= 4:
+                keep_going = False
+        N += 1
+        
+
+    idx = np.flip(np.asarray(idx))
+    
+    for i in range(len(idx)):
+        plt.plot(sample[0:idx[i]])
+
+    plt.grid()
+    plt.savefig("images/outneuron_4_spikes.png")
+    plt.show()
+    pdb.set_trace()

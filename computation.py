@@ -71,11 +71,13 @@ class Computer:
         self.database_port = database_port
         self.use_spif = not args.simulate_spif
         self.ev_counter = 0
+        self.stuff = []
+        self.voltages = []
 
     def __enter__(self):
 
         # Set up PyNN
-        p.setup(timestep=1.0, n_boards_required=1)
+        p.setup(timestep=1, n_boards_required=1)
 
         # Set the number of neurons per core
         if self.dimensions == 1:
@@ -99,12 +101,14 @@ class Computer:
         post_w, post_h = p.PoolDenseConnector.get_post_pool_shape((self.width, self.height), pool_shape)
         weights = np.array(create_weight_list(self.w_fovea, post_w, post_h))
         motor_conn = p.PoolDenseConnector(weights, pool_shape)
-        motor_neurons = p.Population(len(self.labels), self.celltype(**self.cell_params), label="motor_neurons")
-        con_move = p.Projection(dev, motor_neurons, motor_conn, p.PoolDense())
+        self.stuff = p.Population(len(self.labels), self.celltype(**self.cell_params), label="motor_neurons")
+        con_move = p.Projection(dev, self.stuff, motor_conn, p.PoolDense())
+
+        self.stuff.record(["v","spikes"])
 
         # Spike reception (from SpiNNaker to CPU)
         live_spikes_receiver = p.external_devices.SpynnakerLiveSpikesConnection(receive_labels=["motor_neurons"], local_port=PORT_SPIN2CPU)
-        _ = p.external_devices.activate_live_output_for(motor_neurons, database_notify_port_num=live_spikes_receiver.local_port)
+        _ = p.external_devices.activate_live_output_for(self.stuff, database_notify_port_num=live_spikes_receiver.local_port)
         live_spikes_receiver.add_receive_callback("motor_neurons", self.receive_spikes_from_sim)
 
     def __exit__(self, e, b, t):
@@ -121,6 +125,7 @@ class Computer:
     def run_sim(self):
         p.run(self.run_time)
         print(f"{self.ev_counter} events were output")
+        self.voltages = np.asarray(self.stuff.get_data("v").segments[0].filter(name="v")[0]).reshape(-1)
         # p.external_devices.run_forever(sync_time=0)
 
     def wrap_up(self):
