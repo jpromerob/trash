@@ -1,0 +1,29 @@
+[INFO] (data_specification.c: 112): magic = ad130ad6, version = 1.0
+[INFO] (profiler.c: 36): Reading profile setup from 0x60244280
+[INFO] (profiler.c: 42): Initialising profiler with storage for 0 samples starting at 0x60244284
+[INFO] (recording.c: 231): Recording channel 0 left uninitialised
+[INFO] (recording.c: 231): Recording channel 1 left uninitialised
+[INFO] (recording.c: 231): Recording channel 2 left uninitialised
+[INFO] (recording.c: 231): Recording channel 3 left uninitialised
+[INFO] (recording.c: 231): Recording channel 4 left uninitialised
+[INFO] (recording.c: 231): Recording channel 5 left uninitialised
+[INFO] (neuron.c: 154): 	 n_neurons = 4, peak 4, n_synapse_types 2
+[INFO] (local_only_pool_dense_impl.c: 95): +++++++++++++++++ CONV init ++++++++++++++++++++
+[INFO] (local_only_pool_dense_impl.c: 99): num connectors = 6
+[INFO] (local_only_pool_dense_impl.c: 104): num post = 4
+[INFO] (local_only_pool_dense_impl.c: 117): Connector 0: key=0x00000000, mask=0xfffffff4
+[INFO] (local_only_pool_dense_impl.c: 117): Connector 1: key=0x00000004, mask=0xfffffff4
+[INFO] (local_only_pool_dense_impl.c: 117): Connector 2: key=0x00000010, mask=0xfffffff4
+[INFO] (local_only_pool_dense_impl.c: 117): Connector 3: key=0x00000014, mask=0xfffffff4
+[INFO] (local_only_pool_dense_impl.c: 117): Connector 4: key=0x00000020, mask=0xfffffff4
+[INFO] (local_only_pool_dense_impl.c: 117): Connector 5: key=0x00000024, mask=0xfffffff4
+[INFO] (local_only.c: 183): Created input buffer with 256 entries
+[INFO] (local_only.c: 192): synapse_index_bits = 2, synapse_type_index_bits = 3, synapse_delay_mask = 1
+[INFO] (local_only.c: 204): Created ring buffer with 16 entries at 0x00401a6c
+[INFO] (simulation.c: 207): Setting the runtime of this model to 120000 starting at 0
+[INFO] (simulation.c: 209): Setting the flag of infinite run for this model to 0
+[INFO] (simulation.c: 236): Resuming
+[INFO] (simulation.c: 97): Starting basic provenance gathering
+[INFO] (simulation.c: 100): running other provenance gathering
+[INFO] (profiler.c: 56): Profiler wrote 4 bytes to 0x60244280
+

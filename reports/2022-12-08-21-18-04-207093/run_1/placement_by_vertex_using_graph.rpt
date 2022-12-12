@@ -1,0 +1,77 @@
+        Placement Information by Vertex
+        ===============================
+
+Generated: Thu Dec  8 21:18:27 2022 for target machine '172.16.223.43'
+
+**** Vertex: 'SPIFRetinaDevice_1'
+Model: SPIFRetinaDevice
+Pop size: 48
+Machine Vertices: 
+  Slice [(0:4)(0:2)] on FGPA 0, FPGA link 11, board None, linked to chip (0, 0)
+  Slice [(0:4)(0:2)] on FGPA 0, FPGA link 13, board None, linked to chip (0, 0)
+  Slice [(0:4)(0:2)] on FGPA 0, FPGA link 15, board None, linked to chip (0, 0)
+  Slice [(0:4)(0:2)] on FGPA 0, FPGA link 1, board None, linked to chip (0, 0)
+  Slice [(0:4)(0:2)] on FGPA 0, FPGA link 3, board None, linked to chip (0, 0)
+  Slice [(0:4)(0:2)] on FGPA 0, FPGA link 5, board None, linked to chip (0, 0)
+  Slice [(0:4)(0:2)] on FGPA 0, FPGA link 7, board None, linked to chip (0, 0)
+  Slice [(0:4)(0:2)] on FGPA 0, FPGA link 9, board None, linked to chip (0, 0)
+  Slice (0:47) on FGPA 0, FPGA link 15, board None, linked to chip (0, 0)
+  Slice [(4:8)(0:2)] on FGPA 0, FPGA link 11, board None, linked to chip (0, 0)
+  Slice [(4:8)(0:2)] on FGPA 0, FPGA link 13, board None, linked to chip (0, 0)
+  Slice [(4:8)(0:2)] on FGPA 0, FPGA link 15, board None, linked to chip (0, 0)
+  Slice [(4:8)(0:2)] on FGPA 0, FPGA link 1, board None, linked to chip (0, 0)
+  Slice [(4:8)(0:2)] on FGPA 0, FPGA link 3, board None, linked to chip (0, 0)
+  Slice [(4:8)(0:2)] on FGPA 0, FPGA link 5, board None, linked to chip (0, 0)
+  Slice [(4:8)(0:2)] on FGPA 0, FPGA link 7, board None, linked to chip (0, 0)
+  Slice [(4:8)(0:2)] on FGPA 0, FPGA link 9, board None, linked to chip (0, 0)
+  Slice [(0:4)(2:4)] on FGPA 0, FPGA link 11, board None, linked to chip (0, 0)
+  Slice [(0:4)(2:4)] on FGPA 0, FPGA link 13, board None, linked to chip (0, 0)
+  Slice [(0:4)(2:4)] on FGPA 0, FPGA link 15, board None, linked to chip (0, 0)
+  Slice [(0:4)(2:4)] on FGPA 0, FPGA link 1, board None, linked to chip (0, 0)
+  Slice [(0:4)(2:4)] on FGPA 0, FPGA link 3, board None, linked to chip (0, 0)
+  Slice [(0:4)(2:4)] on FGPA 0, FPGA link 5, board None, linked to chip (0, 0)
+  Slice [(0:4)(2:4)] on FGPA 0, FPGA link 7, board None, linked to chip (0, 0)
+  Slice [(0:4)(2:4)] on FGPA 0, FPGA link 9, board None, linked to chip (0, 0)
+  Slice [(4:8)(2:4)] on FGPA 0, FPGA link 11, board None, linked to chip (0, 0)
+  Slice [(4:8)(2:4)] on FGPA 0, FPGA link 13, board None, linked to chip (0, 0)
+  Slice [(4:8)(2:4)] on FGPA 0, FPGA link 15, board None, linked to chip (0, 0)
+  Slice [(4:8)(2:4)] on FGPA 0, FPGA link 1, board None, linked to chip (0, 0)
+  Slice [(4:8)(2:4)] on FGPA 0, FPGA link 3, board None, linked to chip (0, 0)
+  Slice [(4:8)(2:4)] on FGPA 0, FPGA link 5, board None, linked to chip (0, 0)
+  Slice [(4:8)(2:4)] on FGPA 0, FPGA link 7, board None, linked to chip (0, 0)
+  Slice [(4:8)(2:4)] on FGPA 0, FPGA link 9, board None, linked to chip (0, 0)
+  Slice [(0:4)(4:6)] on FGPA 0, FPGA link 11, board None, linked to chip (0, 0)
+  Slice [(0:4)(4:6)] on FGPA 0, FPGA link 13, board None, linked to chip (0, 0)
+  Slice [(0:4)(4:6)] on FGPA 0, FPGA link 15, board None, linked to chip (0, 0)
+  Slice [(0:4)(4:6)] on FGPA 0, FPGA link 1, board None, linked to chip (0, 0)
+  Slice [(0:4)(4:6)] on FGPA 0, FPGA link 3, board None, linked to chip (0, 0)
+  Slice [(0:4)(4:6)] on FGPA 0, FPGA link 5, board None, linked to chip (0, 0)
+  Slice [(0:4)(4:6)] on FGPA 0, FPGA link 7, board None, linked to chip (0, 0)
+  Slice [(0:4)(4:6)] on FGPA 0, FPGA link 9, board None, linked to chip (0, 0)
+  Slice [(4:8)(4:6)] on FGPA 0, FPGA link 11, board None, linked to chip (0, 0)
+  Slice [(4:8)(4:6)] on FGPA 0, FPGA link 13, board None, linked to chip (0, 0)
+  Slice [(4:8)(4:6)] on FGPA 0, FPGA link 15, board None, linked to chip (0, 0)
+  Slice [(4:8)(4:6)] on FGPA 0, FPGA link 1, board None, linked to chip (0, 0)
+  Slice [(4:8)(4:6)] on FGPA 0, FPGA link 3, board None, linked to chip (0, 0)
+  Slice [(4:8)(4:6)] on FGPA 0, FPGA link 5, board None, linked to chip (0, 0)
+  Slice [(4:8)(4:6)] on FGPA 0, FPGA link 7, board None, linked to chip (0, 0)
+  Slice [(4:8)(4:6)] on FGPA 0, FPGA link 9, board None, linked to chip (0, 0)
+
+**** Vertex: 'motor_neurons'
+Model: AbstractPopulationVertex
+Pop size: 4
+Machine Vertices: 
+  Slice (0:3) on core (0, 0, 5) 
+
+**** Vertex: 'LiveSpikeReceiver'
+Model: LivePacketGather
+Pop size: 0
+Machine Vertices: 
+  Slice (0:0) on core (0, 0, 2) 
+
+**** Vertex: 'Command Sender on 0, 0'
+Model: CommandSender
+Pop size: 1
+Machine Vertices: 
+  Slice (0:0) on core (0, 0, 1) 
+

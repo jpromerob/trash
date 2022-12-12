@@ -1,0 +1,14 @@
+[INFO] (data_specification.c: 112): magic = ad130ad6, version = 1.0
+[INFO] (command_sender_multicast_source.c: 206): 0 timed commands
+[INFO] (command_sender_multicast_source.c: 235): 59 start/resume commands
+[INFO] (command_sender_multicast_source.c: 260): 1 pause/stop commands
+[INFO] (simulation.c: 207): Setting the runtime of this model to 120000 starting at 0
+[INFO] (simulation.c: 209): Setting the flag of infinite run for this model to 0
+[INFO] (simulation.c: 236): Resuming
+[INFO] (command_sender_multicast_source.c: 289): running first start resume commands
+[INFO] (command_sender_multicast_source.c: 194): Transmit start/resume commands
+[INFO] (command_sender_multicast_source.c: 185): Transmit pause/stop commands
+[INFO] (simulation.c: 97): Starting basic provenance gathering
+[INFO] (simulation.c: 100): running other provenance gathering
+[INFO] (command_sender_multicast_source.c: 299): in pause resume mode
+

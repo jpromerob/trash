@@ -1,0 +1,230 @@
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS12, Routing Info: KeyAndMask:0xffffff97:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff97:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS30, Routing Info: KeyAndMask:0xffffffb1:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffffb1:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS31, Routing Info: KeyAndMask:0xffffffb2:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffffb2:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS37, Routing Info: KeyAndMask:0xffffff30:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff30:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS14, Routing Info: KeyAndMask:0xffffff11:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff11:0xffffffff
+Vertex: SPIFRetinaDevice_1
+    Partition: SPIKE, Routing Info: KeyAndMask:0x0:0xffffffc0
+    Machine Vertex: Incoming Machine vertex 0 for SPIFRetinaDevice_1:0:1:None:(0, 0), Routing Info: KeyAndMask:0x0:0xffffffff
+    Machine Vertex: Incoming Machine vertex 1 for SPIFRetinaDevice_1:0:1:None:(0, 0), Routing Info: KeyAndMask:0x4:0xffffffff
+    Machine Vertex: Incoming Machine vertex 2 for SPIFRetinaDevice_1:0:1:None:(0, 0), Routing Info: KeyAndMask:0x10:0xffffffff
+    Machine Vertex: Incoming Machine vertex 3 for SPIFRetinaDevice_1:0:1:None:(0, 0), Routing Info: KeyAndMask:0x14:0xffffffff
+    Machine Vertex: Incoming Machine vertex 4 for SPIFRetinaDevice_1:0:1:None:(0, 0), Routing Info: KeyAndMask:0x20:0xffffffff
+    Machine Vertex: Incoming Machine vertex 5 for SPIFRetinaDevice_1:0:1:None:(0, 0), Routing Info: KeyAndMask:0x24:0xffffffff
+    Machine Vertex: Incoming Machine vertex 0 for SPIFRetinaDevice_1:0:3:None:(0, 0), Routing Info: KeyAndMask:0x1:0xffffffff
+    Machine Vertex: Incoming Machine vertex 1 for SPIFRetinaDevice_1:0:3:None:(0, 0), Routing Info: KeyAndMask:0x5:0xffffffff
+    Machine Vertex: Incoming Machine vertex 2 for SPIFRetinaDevice_1:0:3:None:(0, 0), Routing Info: KeyAndMask:0x11:0xffffffff
+    Machine Vertex: Incoming Machine vertex 3 for SPIFRetinaDevice_1:0:3:None:(0, 0), Routing Info: KeyAndMask:0x15:0xffffffff
+    Machine Vertex: Incoming Machine vertex 4 for SPIFRetinaDevice_1:0:3:None:(0, 0), Routing Info: KeyAndMask:0x21:0xffffffff
+    Machine Vertex: Incoming Machine vertex 5 for SPIFRetinaDevice_1:0:3:None:(0, 0), Routing Info: KeyAndMask:0x25:0xffffffff
+    Machine Vertex: Incoming Machine vertex 0 for SPIFRetinaDevice_1:0:5:None:(0, 0), Routing Info: KeyAndMask:0x2:0xffffffff
+    Machine Vertex: Incoming Machine vertex 1 for SPIFRetinaDevice_1:0:5:None:(0, 0), Routing Info: KeyAndMask:0x6:0xffffffff
+    Machine Vertex: Incoming Machine vertex 2 for SPIFRetinaDevice_1:0:5:None:(0, 0), Routing Info: KeyAndMask:0x12:0xffffffff
+    Machine Vertex: Incoming Machine vertex 3 for SPIFRetinaDevice_1:0:5:None:(0, 0), Routing Info: KeyAndMask:0x16:0xffffffff
+    Machine Vertex: Incoming Machine vertex 4 for SPIFRetinaDevice_1:0:5:None:(0, 0), Routing Info: KeyAndMask:0x22:0xffffffff
+    Machine Vertex: Incoming Machine vertex 5 for SPIFRetinaDevice_1:0:5:None:(0, 0), Routing Info: KeyAndMask:0x26:0xffffffff
+    Machine Vertex: Incoming Machine vertex 0 for SPIFRetinaDevice_1:0:7:None:(0, 0), Routing Info: KeyAndMask:0x3:0xffffffff
+    Machine Vertex: Incoming Machine vertex 1 for SPIFRetinaDevice_1:0:7:None:(0, 0), Routing Info: KeyAndMask:0x7:0xffffffff
+    Machine Vertex: Incoming Machine vertex 2 for SPIFRetinaDevice_1:0:7:None:(0, 0), Routing Info: KeyAndMask:0x13:0xffffffff
+    Machine Vertex: Incoming Machine vertex 3 for SPIFRetinaDevice_1:0:7:None:(0, 0), Routing Info: KeyAndMask:0x17:0xffffffff
+    Machine Vertex: Incoming Machine vertex 4 for SPIFRetinaDevice_1:0:7:None:(0, 0), Routing Info: KeyAndMask:0x23:0xffffffff
+    Machine Vertex: Incoming Machine vertex 5 for SPIFRetinaDevice_1:0:7:None:(0, 0), Routing Info: KeyAndMask:0x27:0xffffffff
+    Machine Vertex: Incoming Machine vertex 0 for SPIFRetinaDevice_1:0:9:None:(0, 0), Routing Info: KeyAndMask:0x8:0xffffffff
+    Machine Vertex: Incoming Machine vertex 1 for SPIFRetinaDevice_1:0:9:None:(0, 0), Routing Info: KeyAndMask:0xc:0xffffffff
+    Machine Vertex: Incoming Machine vertex 2 for SPIFRetinaDevice_1:0:9:None:(0, 0), Routing Info: KeyAndMask:0x18:0xffffffff
+    Machine Vertex: Incoming Machine vertex 3 for SPIFRetinaDevice_1:0:9:None:(0, 0), Routing Info: KeyAndMask:0x1c:0xffffffff
+    Machine Vertex: Incoming Machine vertex 4 for SPIFRetinaDevice_1:0:9:None:(0, 0), Routing Info: KeyAndMask:0x28:0xffffffff
+    Machine Vertex: Incoming Machine vertex 5 for SPIFRetinaDevice_1:0:9:None:(0, 0), Routing Info: KeyAndMask:0x2c:0xffffffff
+    Machine Vertex: Incoming Machine vertex 0 for SPIFRetinaDevice_1:0:11:None:(0, 0), Routing Info: KeyAndMask:0x9:0xffffffff
+    Machine Vertex: Incoming Machine vertex 1 for SPIFRetinaDevice_1:0:11:None:(0, 0), Routing Info: KeyAndMask:0xd:0xffffffff
+    Machine Vertex: Incoming Machine vertex 2 for SPIFRetinaDevice_1:0:11:None:(0, 0), Routing Info: KeyAndMask:0x19:0xffffffff
+    Machine Vertex: Incoming Machine vertex 3 for SPIFRetinaDevice_1:0:11:None:(0, 0), Routing Info: KeyAndMask:0x1d:0xffffffff
+    Machine Vertex: Incoming Machine vertex 4 for SPIFRetinaDevice_1:0:11:None:(0, 0), Routing Info: KeyAndMask:0x29:0xffffffff
+    Machine Vertex: Incoming Machine vertex 5 for SPIFRetinaDevice_1:0:11:None:(0, 0), Routing Info: KeyAndMask:0x2d:0xffffffff
+    Machine Vertex: Incoming Machine vertex 0 for SPIFRetinaDevice_1:0:13:None:(0, 0), Routing Info: KeyAndMask:0xa:0xffffffff
+    Machine Vertex: Incoming Machine vertex 1 for SPIFRetinaDevice_1:0:13:None:(0, 0), Routing Info: KeyAndMask:0xe:0xffffffff
+    Machine Vertex: Incoming Machine vertex 2 for SPIFRetinaDevice_1:0:13:None:(0, 0), Routing Info: KeyAndMask:0x1a:0xffffffff
+    Machine Vertex: Incoming Machine vertex 3 for SPIFRetinaDevice_1:0:13:None:(0, 0), Routing Info: KeyAndMask:0x1e:0xffffffff
+    Machine Vertex: Incoming Machine vertex 4 for SPIFRetinaDevice_1:0:13:None:(0, 0), Routing Info: KeyAndMask:0x2a:0xffffffff
+    Machine Vertex: Incoming Machine vertex 5 for SPIFRetinaDevice_1:0:13:None:(0, 0), Routing Info: KeyAndMask:0x2e:0xffffffff
+    Machine Vertex: Incoming Machine vertex 0 for SPIFRetinaDevice_1:0:15:None:(0, 0), Routing Info: KeyAndMask:0xb:0xffffffff
+    Machine Vertex: Incoming Machine vertex 1 for SPIFRetinaDevice_1:0:15:None:(0, 0), Routing Info: KeyAndMask:0xf:0xffffffff
+    Machine Vertex: Incoming Machine vertex 2 for SPIFRetinaDevice_1:0:15:None:(0, 0), Routing Info: KeyAndMask:0x1b:0xffffffff
+    Machine Vertex: Incoming Machine vertex 3 for SPIFRetinaDevice_1:0:15:None:(0, 0), Routing Info: KeyAndMask:0x1f:0xffffffff
+    Machine Vertex: Incoming Machine vertex 4 for SPIFRetinaDevice_1:0:15:None:(0, 0), Routing Info: KeyAndMask:0x2b:0xffffffff
+    Machine Vertex: Incoming Machine vertex 5 for SPIFRetinaDevice_1:0:15:None:(0, 0), Routing Info: KeyAndMask:0x2f:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS4, Routing Info: KeyAndMask:0xfffffe10:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xfffffe10:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS44, Routing Info: KeyAndMask:0xffffff37:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff37:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS2, Routing Info: KeyAndMask:0xffffff82:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff82:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS5, Routing Info: KeyAndMask:0xffffff90:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff90:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS3, Routing Info: KeyAndMask:0xffffff83:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff83:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS55, Routing Info: KeyAndMask:0xffffff70:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff70:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS6, Routing Info: KeyAndMask:0xffffff91:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff91:0xffffffff
+Vertex: motor_neurons with 4 atoms
+    Partition: SPIKE, Routing Info: KeyAndMask:0x80:0xffffffc0
+    Machine Vertex: motor_neurons(0:3), Routing Info: KeyAndMask:0x80:0xffffffc0
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS21, Routing Info: KeyAndMask:0xffffff20:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff20:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS38, Routing Info: KeyAndMask:0xffffff31:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff31:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS15, Routing Info: KeyAndMask:0xffffff12:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff12:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS26, Routing Info: KeyAndMask:0xffffff25:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff25:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS45, Routing Info: KeyAndMask:0xffffff40:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff40:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS8, Routing Info: KeyAndMask:0xffffff93:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff93:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS58, Routing Info: KeyAndMask:0xffffff73:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff73:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS47, Routing Info: KeyAndMask:0xffffff42:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff42:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS39, Routing Info: KeyAndMask:0xffffff32:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff32:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS50, Routing Info: KeyAndMask:0xffffff50:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff50:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS23, Routing Info: KeyAndMask:0xffffff22:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff22:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS7, Routing Info: KeyAndMask:0xffffff92:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff92:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS33, Routing Info: KeyAndMask:0xffffffb4:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffffb4:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS40, Routing Info: KeyAndMask:0xffffff33:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff33:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS11, Routing Info: KeyAndMask:0xffffff96:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff96:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS13, Routing Info: KeyAndMask:0xffffff10:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff10:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS19, Routing Info: KeyAndMask:0xffffff16:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff16:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS52, Routing Info: KeyAndMask:0xffffff61:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff61:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS10, Routing Info: KeyAndMask:0xffffff95:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff95:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS57, Routing Info: KeyAndMask:0xffffff72:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff72:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS54, Routing Info: KeyAndMask:0xffffff63:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff63:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS18, Routing Info: KeyAndMask:0xffffff15:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff15:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS24, Routing Info: KeyAndMask:0xffffff23:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff23:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS34, Routing Info: KeyAndMask:0xffffffb5:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffffb5:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS53, Routing Info: KeyAndMask:0xffffff62:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff62:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS56, Routing Info: KeyAndMask:0xffffff71:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff71:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS43, Routing Info: KeyAndMask:0xffffff36:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff36:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS35, Routing Info: KeyAndMask:0xffffffb6:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffffb6:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS42, Routing Info: KeyAndMask:0xffffff35:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff35:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS27, Routing Info: KeyAndMask:0xffffff26:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff26:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS49, Routing Info: KeyAndMask:0xfffffe11:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xfffffe11:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS9, Routing Info: KeyAndMask:0xffffff94:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff94:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS1, Routing Info: KeyAndMask:0xffffff81:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff81:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS17, Routing Info: KeyAndMask:0xffffff14:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff14:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS16, Routing Info: KeyAndMask:0xffffff13:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff13:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS32, Routing Info: KeyAndMask:0xffffffb3:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffffb3:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS51, Routing Info: KeyAndMask:0xffffff60:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff60:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS22, Routing Info: KeyAndMask:0xffffff21:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff21:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS46, Routing Info: KeyAndMask:0xffffff41:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff41:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS41, Routing Info: KeyAndMask:0xffffff34:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff34:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS28, Routing Info: KeyAndMask:0xffffff27:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff27:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS48, Routing Info: KeyAndMask:0xffffff43:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff43:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS20, Routing Info: KeyAndMask:0xffffff17:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff17:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS25, Routing Info: KeyAndMask:0xffffff24:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff24:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS29, Routing Info: KeyAndMask:0xffffffb0:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffffb0:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS36, Routing Info: KeyAndMask:0xffffffb7:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffffb7:0xffffffff
+Vertex: Command Sender on 0, 0
+    Partition: COMMANDS0, Routing Info: KeyAndMask:0xffffff80:0xffffffff
+    Machine Vertex: Command Sender on 0, 0, Routing Info: KeyAndMask:0xffffff80:0xffffffff

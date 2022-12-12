@@ -1,0 +1,77 @@
+        Partitioning Information by Vertex
+        ===============================
+
+Generated: Thu Dec  8 21:18:27 2022 for target machine '172.16.223.43'
+
+**** Vertex: 'SPIFRetinaDevice_1'
+Model: SPIFRetinaDevice
+Pop size: 48
+Machine Vertices: 
+  Slice [(0:4)(0:2)]
+  Slice [(0:4)(0:2)]
+  Slice [(0:4)(0:2)]
+  Slice [(0:4)(0:2)]
+  Slice [(0:4)(0:2)]
+  Slice [(0:4)(0:2)]
+  Slice [(0:4)(0:2)]
+  Slice [(0:4)(0:2)]
+  Slice (0:47)
+  Slice [(4:8)(0:2)]
+  Slice [(4:8)(0:2)]
+  Slice [(4:8)(0:2)]
+  Slice [(4:8)(0:2)]
+  Slice [(4:8)(0:2)]
+  Slice [(4:8)(0:2)]
+  Slice [(4:8)(0:2)]
+  Slice [(4:8)(0:2)]
+  Slice [(0:4)(2:4)]
+  Slice [(0:4)(2:4)]
+  Slice [(0:4)(2:4)]
+  Slice [(0:4)(2:4)]
+  Slice [(0:4)(2:4)]
+  Slice [(0:4)(2:4)]
+  Slice [(0:4)(2:4)]
+  Slice [(0:4)(2:4)]
+  Slice [(4:8)(2:4)]
+  Slice [(4:8)(2:4)]
+  Slice [(4:8)(2:4)]
+  Slice [(4:8)(2:4)]
+  Slice [(4:8)(2:4)]
+  Slice [(4:8)(2:4)]
+  Slice [(4:8)(2:4)]
+  Slice [(4:8)(2:4)]
+  Slice [(0:4)(4:6)]
+  Slice [(0:4)(4:6)]
+  Slice [(0:4)(4:6)]
+  Slice [(0:4)(4:6)]
+  Slice [(0:4)(4:6)]
+  Slice [(0:4)(4:6)]
+  Slice [(0:4)(4:6)]
+  Slice [(0:4)(4:6)]
+  Slice [(4:8)(4:6)]
+  Slice [(4:8)(4:6)]
+  Slice [(4:8)(4:6)]
+  Slice [(4:8)(4:6)]
+  Slice [(4:8)(4:6)]
+  Slice [(4:8)(4:6)]
+  Slice [(4:8)(4:6)]
+  Slice [(4:8)(4:6)]
+
+**** Vertex: 'motor_neurons'
+Model: AbstractPopulationVertex
+Pop size: 4
+Machine Vertices: 
+  Slice (0:3)
+
+**** Vertex: 'LiveSpikeReceiver'
+Model: LivePacketGather
+Pop size: 0
+Machine Vertices: 
+  Slice (0:0)
+
+**** Vertex: 'Command Sender on 0, 0'
+Model: CommandSender
+Pop size: 1
+Machine Vertices: 
+  Slice (0:0)
+

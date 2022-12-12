@@ -1,0 +1,10 @@
+Router contains 6 entries
+Index Key        Mask       Route      Default [Cores][Links]
+----- ---------- ---------- ---------- ------- --------------
+    0 0x00000000 0xFFFFFFFF 0x00000010 False   [] [SW]
+    1 0x00000004 0xFFFFFFFF 0x00000010 False   [] [SW]
+    2 0x00000010 0xFFFFFFFF 0x00000010 False   [] [SW]
+    3 0x00000014 0xFFFFFFFF 0x00000010 False   [] [SW]
+    4 0x00000020 0xFFFFFFFF 0x00000010 False   [] [SW]
+    5 0x00000024 0xFFFFFFFF 0x00000010 False   [] [SW]
+0 Defaultable entries

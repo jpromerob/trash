@@ -1,0 +1,71 @@
+SpYNNakerNeuronGraphNetworkSpecificationReport skipped as cfg Reports:write_network_graph is False
+Network Specification report took 0:00:00.000263 
+Splitter reset took 0:00:00.000020 
+Spynnaker splitter selector took 0:00:00.000523 
+DelaySupportAdder took 0:00:00.000117 
+SpynnakerSplitterPartitioner took 0:00:00.001600 
+Machine generator took 0:00:09.932355 
+Json machine skipped as cfg Reports:write_json_machine is False
+Board chip report took 0:00:00.000349 
+Command Sender Adder took 0:00:00.000688 
+Split Live Gather Vertices took 0:00:00.000050 
+Insert chip power monitors skipped as cfg Reports:write_energy_report is False
+Insert extra monitor vertices took 0:00:00.000009 
+Partitioner report took 0:00:00.000220 
+Local TDMA builder took 0:00:00.000038 
+Application Placer took 0:00:00.000841 
+Placements wth application graph report took 0:00:00.000666 
+Json placements skipped as cfg Reports:write_json_placements is False
+System multicast routing generator took 0:00:00.000883 
+Fixed route router took 0:00:00.000301 
+Application Router took 0:00:00.003466 
+Basic tag allocator took 0:00:00.000258 
+Tag allocator report took 0:00:00.000094 
+Zoned routing info allocator took 0:00:00.006752 
+Router info report took 0:00:00.000444 
+Merged routing table generator took 0:00:00.001382 
+Uncompressed routing table report took 0:00:00.001533 
+Router report skipped as cfg Reports:write_router_reports is False
+Router summary report skipped as cfg Reports:write_router_summary_report is False
+Json routing tables skipped as cfg Reports:write_json_routing_tables is False
+Locate executable start type took 0:00:00.000121 
+Buffer manager creator took 0:00:00.000779 
+SDRAM outgoing partition allocator took 0:00:00.000061 
+Routing setup took 0:00:00.013396 
+Graph binary gatherer took 0:00:00.001531 
+Pair on chip router compression skipped as Tables already small enough
+Graph data specification writer took 0:00:00.026873 
+Control Sync took 0:00:00.000142 
+Load fixed routes took 0:00:00.011829 
+Execute system data specification took 0:00:00.742017 
+Load executable system Images took 0:00:00.408184 
+Tags Loader took 0:00:00.004205 
+Host data specification took 0:00:00.675269 
+Neuron expander took 0:00:00.769664 
+Synapse expander took 0:00:00.512915 
+Finish connection holders took 0:00:00.000429 
+Routing table loader took 0:00:00.009472 
+Bitfield compressor report skipped as cfg Reports:write_bit_field_compressor_report is False
+Tags from machine report took 0:00:00.001457 
+Memory report skipped as cfg Reports:write_memory_map_report is False
+Memory report skipped as cfg Reports:write_memory_map_report is False
+Compressor report took 0:00:00.002382 
+Fixed route report took 0:00:00.009519 
+Load executable app images took 0:00:00.506288 
+Sdram usage per chip report took 0:00:00.001143 
+Drift report skipped as cfg Reports:write_drift_report_start is False
+Create database interface took 0:00:00.030341 
+Create notification protocol took 0:00:00.000473 
+Runtime Update took 0:00:00.021162 
+Application runner took 0:02:00.290489 
+Extract IO buff took 0:00:00.027867 
+Buffer extractor took 0:00:00.001475 
+Clear IO buffer took 0:00:00.000265 
+Graph provenance gatherer took 0:00:00.000746 
+Placements provenance gatherer took 0:00:00.107877 
+Router provenance gatherer took 0:00:01.108967 
+Profile data gatherer took 0:00:00.000592 
+Energy report skipped as cfg Reports:write_energy_report is False
+Redundant packet count report took 0:00:00.001964 
+Drift report skipped as cfg Reports:write_drift_report_end is False
+Control Sync took 0:00:00.000132 

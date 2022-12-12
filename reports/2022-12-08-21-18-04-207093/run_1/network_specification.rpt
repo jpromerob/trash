@@ -1,0 +1,14 @@
+*** Vertices:
+Vertex SPIFRetinaDevice_1, size: 48, model: SPIFRetinaDevice, max_atoms48
+    Outgoing Edge Partitions:
+    Partition SPIKE:
+        Edge: projection edge 1, From SPIFRetinaDevice_1 to motor_neurons, model: ProjectionApplicationEdge
+
+Vertex motor_neurons, size: 4, model: AbstractPopulationVertex, max_atoms16
+    Outgoing Edge Partitions:
+    Partition SPIKE:
+        Edge: None, From motor_neurons to LiveSpikeReceiver, model: ApplicationEdge
+
+Vertex LiveSpikeReceiver, size: 0, model: LivePacketGather, max_atoms0
+    Outgoing Edge Partitions:
+

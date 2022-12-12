@@ -1,0 +1,323 @@
+        Memory Usage by Core
+        ====================
+
+Generated: Thu Dec  8 21:18:31 2022 for target machine '172.16.223.43'
+
+Planned by partitioner
+----------------------
+Based on 1000 timesteps
+
+SDRAM reqs for core (0,0,1) is 1 KB (1652 bytes) for Placement(vertex=Command Sender on 0, 0, x=0, y=0, p=1)
+SDRAM reqs for core (0,0,2) is 0 KB (512 bytes) for Placement(vertex=LiveSpikeReceiver, x=0, y=0, p=2)
+SDRAM reqs for core (0,0,4) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=0, y=0, p=4)
+SDRAM reqs for core (0,1,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=0, y=1, p=1)
+SDRAM reqs for core (0,2,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=0, y=2, p=1)
+SDRAM reqs for core (0,3,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=0, y=3, p=1)
+SDRAM reqs for core (1,0,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=1, y=0, p=1)
+SDRAM reqs for core (1,1,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=1, y=1, p=1)
+SDRAM reqs for core (1,2,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=1, y=2, p=1)
+SDRAM reqs for core (1,3,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=1, y=3, p=1)
+SDRAM reqs for core (1,4,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=1, y=4, p=1)
+SDRAM reqs for core (2,0,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=2, y=0, p=1)
+SDRAM reqs for core (2,1,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=2, y=1, p=1)
+SDRAM reqs for core (2,2,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=2, y=2, p=1)
+SDRAM reqs for core (2,3,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=2, y=3, p=1)
+SDRAM reqs for core (2,4,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=2, y=4, p=1)
+SDRAM reqs for core (2,5,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=2, y=5, p=1)
+SDRAM reqs for core (3,0,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=3, y=0, p=1)
+SDRAM reqs for core (3,1,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=3, y=1, p=1)
+SDRAM reqs for core (3,2,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=3, y=2, p=1)
+SDRAM reqs for core (3,3,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=3, y=3, p=1)
+SDRAM reqs for core (3,4,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=3, y=4, p=1)
+SDRAM reqs for core (3,5,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=3, y=5, p=1)
+SDRAM reqs for core (3,6,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=3, y=6, p=1)
+SDRAM reqs for core (4,0,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=4, y=0, p=1)
+SDRAM reqs for core (4,1,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=4, y=1, p=1)
+SDRAM reqs for core (4,2,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=4, y=2, p=1)
+SDRAM reqs for core (4,3,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=4, y=3, p=1)
+SDRAM reqs for core (4,4,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=4, y=4, p=1)
+SDRAM reqs for core (4,5,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=4, y=5, p=1)
+SDRAM reqs for core (4,6,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=4, y=6, p=1)
+SDRAM reqs for core (4,7,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=4, y=7, p=1)
+SDRAM reqs for core (5,1,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=5, y=1, p=1)
+SDRAM reqs for core (5,2,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=5, y=2, p=1)
+SDRAM reqs for core (5,3,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=5, y=3, p=1)
+SDRAM reqs for core (5,4,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=5, y=4, p=1)
+SDRAM reqs for core (5,5,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=5, y=5, p=1)
+SDRAM reqs for core (5,6,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=5, y=6, p=1)
+SDRAM reqs for core (5,7,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=5, y=7, p=1)
+SDRAM reqs for core (6,2,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=6, y=2, p=1)
+SDRAM reqs for core (6,3,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=6, y=3, p=1)
+SDRAM reqs for core (6,4,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=6, y=4, p=1)
+SDRAM reqs for core (6,5,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=6, y=5, p=1)
+SDRAM reqs for core (6,6,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=6, y=6, p=1)
+SDRAM reqs for core (6,7,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=6, y=7, p=1)
+SDRAM reqs for core (7,3,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=7, y=3, p=1)
+SDRAM reqs for core (7,4,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=7, y=4, p=1)
+SDRAM reqs for core (7,5,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=7, y=5, p=1)
+SDRAM reqs for core (7,6,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=7, y=6, p=1)
+SDRAM reqs for core (7,7,1) is 477 KB (488476 bytes) for Placement(vertex=SYSTEM:ExtraMonitor, x=7, y=7, p=1)
+SDRAM reqs for core (0,0,3) is 466 KB (477250 bytes) for Placement(vertex=SYSTEM:PacketGatherer(0,0), x=0, y=0, p=3)
+SDRAM reqs for core (0,0,5) is 9 KB (9288.0 bytes) for Placement(vertex=motor_neurons(0:3), x=0, y=0, p=5)
+**** Chip: (0, 0) has total memory usage of 954 KB (977178.0 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (0, 1) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (0, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (0, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (1, 0) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (1, 1) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (1, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (1, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (1, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (2, 0) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (2, 1) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (2, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (2, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (2, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (2, 5) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 0) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 1) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 5) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 6) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 0) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 1) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 5) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 6) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 7) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 1) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 5) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 6) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 7) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (6, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (6, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (6, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (6, 5) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (6, 6) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (6, 7) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (7, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (7, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (7, 5) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (7, 6) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (7, 7) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+
+Actual space reserved on the machine
+----------------------
+Based on 9223372036854775807 timesteps
+
+ core (0,0,1) Constant 1652 bytes
+ core (0,0,2) Constant 512 bytes
+ core (0,0,4) Constant 488476 bytes
+ core (0,1,1) Constant 488476 bytes
+ core (0,2,1) Constant 488476 bytes
+ core (0,3,1) Constant 488476 bytes
+ core (1,0,1) Constant 488476 bytes
+ core (1,1,1) Constant 488476 bytes
+ core (1,2,1) Constant 488476 bytes
+ core (1,3,1) Constant 488476 bytes
+ core (1,4,1) Constant 488476 bytes
+ core (2,0,1) Constant 488476 bytes
+ core (2,1,1) Constant 488476 bytes
+ core (2,2,1) Constant 488476 bytes
+ core (2,3,1) Constant 488476 bytes
+ core (2,4,1) Constant 488476 bytes
+ core (2,5,1) Constant 488476 bytes
+ core (3,0,1) Constant 488476 bytes
+ core (3,1,1) Constant 488476 bytes
+ core (3,2,1) Constant 488476 bytes
+ core (3,3,1) Constant 488476 bytes
+ core (3,4,1) Constant 488476 bytes
+ core (3,5,1) Constant 488476 bytes
+ core (3,6,1) Constant 488476 bytes
+ core (4,0,1) Constant 488476 bytes
+ core (4,1,1) Constant 488476 bytes
+ core (4,2,1) Constant 488476 bytes
+ core (4,3,1) Constant 488476 bytes
+ core (4,4,1) Constant 488476 bytes
+ core (4,5,1) Constant 488476 bytes
+ core (4,6,1) Constant 488476 bytes
+ core (4,7,1) Constant 488476 bytes
+ core (5,1,1) Constant 488476 bytes
+ core (5,2,1) Constant 488476 bytes
+ core (5,3,1) Constant 488476 bytes
+ core (5,4,1) Constant 488476 bytes
+ core (5,5,1) Constant 488476 bytes
+ core (5,6,1) Constant 488476 bytes
+ core (5,7,1) Constant 488476 bytes
+ core (6,2,1) Constant 488476 bytes
+ core (6,3,1) Constant 488476 bytes
+ core (6,4,1) Constant 488476 bytes
+ core (6,5,1) Constant 488476 bytes
+ core (6,6,1) Constant 488476 bytes
+ core (6,7,1) Constant 488476 bytes
+ core (7,3,1) Constant 488476 bytes
+ core (7,4,1) Constant 488476 bytes
+ core (7,5,1) Constant 488476 bytes
+ core (7,6,1) Constant 488476 bytes
+ core (7,7,1) Constant 488476 bytes
+ core (0,0,3) Constant 477250 bytes
+ core (0,0,5) Fixed 9288 bytes Per_timestep 0.0 bytes for a total of 9288.0
+     18: Fixed 0 bytes Per_timestep 0.0 bytes for a total of 0.0
+     0: Constant 412 bytes
+     3: Constant 124 bytes
+     1: Constant 64 bytes
+     2: Constant 4 bytes
+     4: Constant 44 bytes
+     5: Constant 244 bytes
+     6: Constant 4 bytes
+     7: Constant 84 bytes
+     10: Constant 1892 bytes
+     11: Constant 244 bytes
+     8: Constant 20 bytes
+     9: Constant 6152 bytes
+**** Chip: (0, 0) has total memory usage of 954 KB (977178.0 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (0, 1) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (0, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (0, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (1, 0) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (1, 1) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (1, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (1, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (1, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (2, 0) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (2, 1) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (2, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (2, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (2, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (2, 5) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 0) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 1) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 5) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (3, 6) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 0) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 1) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 5) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 6) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (4, 7) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 1) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 5) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 6) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (5, 7) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (6, 2) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (6, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (6, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (6, 5) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (6, 6) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (6, 7) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (7, 3) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (7, 4) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (7, 5) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (7, 6) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+
+**** Chip: (7, 7) has total memory usage of 477 KB (488476 bytes) out of a max of 120575 KB (123469792 bytes)
+

@@ -1,0 +1,2 @@
+IPTag(board_address=172.16.223.43, destination_x=0, destination_y=0, tag=7, port=17895, ip_address=0.0.0.0, strip_sdp=True, traffic_identifier=LPG_EVENT_STREAM)
+IPTag(board_address=172.16.223.43, destination_x=0, destination_y=0, tag=6, port=10000, ip_address=localhost, strip_sdp=True, traffic_identifier=DATA_SPEED_UP)

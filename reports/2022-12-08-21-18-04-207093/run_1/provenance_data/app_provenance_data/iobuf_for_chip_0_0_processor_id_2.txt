@@ -1,0 +1,20 @@
+[INFO] (data_specification.c: 112): magic = ad130ad6, version = 1.0
+[INFO] (live_packet_gather.c: 510): apply_prefix: 0
+[INFO] (live_packet_gather.c: 511): prefix: 00000000
+[INFO] (live_packet_gather.c: 512): prefix_type: 0
+[INFO] (live_packet_gather.c: 513): packet_type: 2
+[INFO] (live_packet_gather.c: 514): key_right_shift: 0
+[INFO] (live_packet_gather.c: 515): payload_timestamp: 1
+[INFO] (live_packet_gather.c: 516): payload_apply_prefix: 1
+[INFO] (live_packet_gather.c: 517): payload_prefix: 00000000
+[INFO] (live_packet_gather.c: 518): payload_right_shift: 0
+[INFO] (live_packet_gather.c: 519): sdp_tag: 7
+[INFO] (live_packet_gather.c: 520): sdp_dest: 0x0000
+[INFO] (live_packet_gather.c: 521): packets_per_timestamp: 0
+[INFO] (live_packet_gather.c: 522): n_translation_entries: 0
+[INFO] (simulation.c: 207): Setting the runtime of this model to 120000 starting at 0
+[INFO] (simulation.c: 209): Setting the flag of infinite run for this model to 0
+[INFO] (simulation.c: 236): Resuming
+[INFO] (simulation.c: 97): Starting basic provenance gathering
+[INFO] (simulation.c: 100): running other provenance gathering
+

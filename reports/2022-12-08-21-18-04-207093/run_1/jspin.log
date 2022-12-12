@@ -1,0 +1,90 @@
+21:18:28.338 INFO  DatabaseEngine:66 - will manage database at /home/juan/nice/evaltsts/reports/2022-12-08-21-18-04-207093/run_1/ds.sqlite3
+21:18:28.347 INFO  Transceiver:404 - Creating transceiver for /172.16.223.43
+21:18:28.349 INFO  UDPTransceiver:99 - registering connection BootConnection(/172.16.223.5:49683 <--> /172.16.223.43:54321) for /172.16.223.5
+21:18:28.350 INFO  UDPTransceiver:99 - registering connection SCPConnection(/172.16.223.5:34738 <--> /172.16.223.43:17893) for /172.16.223.5
+21:18:28.350 INFO  Transceiver:560 - known connections to this transceiver: {/172.16.223.43=SCPConnection(/172.16.223.5:34738 <--> /172.16.223.43:17893)}
+21:18:28.437 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:0 Y:0 (1016 bytes at 0x60240018)
+21:18:28.442 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:0 Y:0 (1052 bytes at 0x60240418)
+21:18:28.446 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:0 Y:1 (1052 bytes at 0x60240018)
+21:18:28.449 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:0 Y:2 (1052 bytes at 0x60240018)
+21:18:28.453 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:0 Y:3 (1052 bytes at 0x60240018)
+21:18:28.459 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:1 Y:0 (1052 bytes at 0x60240018)
+21:18:28.462 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:1 Y:1 (1052 bytes at 0x60240018)
+21:18:28.465 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:1 Y:2 (1052 bytes at 0x60240018)
+21:18:28.468 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:1 Y:3 (1052 bytes at 0x60240018)
+21:18:28.472 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:1 Y:4 (1052 bytes at 0x60240018)
+21:18:28.475 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:2 Y:0 (1052 bytes at 0x60240018)
+21:18:28.478 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:2 Y:1 (1052 bytes at 0x60240018)
+21:18:28.481 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:2 Y:2 (1052 bytes at 0x60240018)
+21:18:28.484 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:2 Y:3 (1052 bytes at 0x60240018)
+21:18:28.488 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:2 Y:4 (1052 bytes at 0x60240018)
+21:18:28.492 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:2 Y:5 (1052 bytes at 0x60240018)
+21:18:28.496 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:3 Y:0 (1052 bytes at 0x60240018)
+21:18:28.500 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:3 Y:1 (1052 bytes at 0x60240018)
+21:18:28.504 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:3 Y:2 (1052 bytes at 0x60240018)
+21:18:28.506 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:3 Y:3 (1052 bytes at 0x60240018)
+21:18:28.511 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:3 Y:4 (1052 bytes at 0x60240018)
+21:18:28.514 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:3 Y:5 (1052 bytes at 0x60240018)
+21:18:28.516 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:3 Y:6 (1052 bytes at 0x60240018)
+21:18:28.519 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:4 Y:0 (1052 bytes at 0x60240018)
+21:18:28.521 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:4 Y:1 (1052 bytes at 0x60240018)
+21:18:28.524 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:4 Y:2 (1052 bytes at 0x60240018)
+21:18:28.527 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:4 Y:3 (1052 bytes at 0x60240018)
+21:18:28.530 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:4 Y:4 (1052 bytes at 0x60240018)
+21:18:28.533 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:4 Y:5 (1052 bytes at 0x60240018)
+21:18:28.536 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:4 Y:6 (1052 bytes at 0x60240018)
+21:18:28.541 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:4 Y:7 (1052 bytes at 0x60240018)
+21:18:28.544 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:5 Y:1 (1052 bytes at 0x60240018)
+21:18:28.547 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:5 Y:2 (1052 bytes at 0x60240018)
+21:18:28.550 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:5 Y:3 (1052 bytes at 0x60240018)
+21:18:28.553 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:5 Y:4 (1052 bytes at 0x60240018)
+21:18:28.556 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:5 Y:5 (1052 bytes at 0x60240018)
+21:18:28.559 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:5 Y:6 (1052 bytes at 0x60240018)
+21:18:28.563 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:5 Y:7 (1052 bytes at 0x60240018)
+21:18:28.566 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:6 Y:2 (1052 bytes at 0x60240018)
+21:18:28.569 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:6 Y:3 (1052 bytes at 0x60240018)
+21:18:28.572 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:6 Y:4 (1052 bytes at 0x60240018)
+21:18:28.575 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:6 Y:5 (1052 bytes at 0x60240018)
+21:18:28.578 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:6 Y:6 (1052 bytes at 0x60240018)
+21:18:28.581 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:6 Y:7 (1052 bytes at 0x60240018)
+21:18:28.584 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:7 Y:3 (1052 bytes at 0x60240018)
+21:18:28.589 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:7 Y:4 (1052 bytes at 0x60240018)
+21:18:28.592 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:7 Y:5 (1052 bytes at 0x60240018)
+21:18:28.595 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:7 Y:6 (1052 bytes at 0x60240018)
+21:18:28.597 INFO  HostExecuteDataSpecification:271 (board:0,0) loading data onto X:7 Y:7 (1052 bytes at 0x60240018)
+21:18:28.599 INFO  Transceiver:2590 - total retries used: 0
+21:18:29.502 INFO  DatabaseEngine:66 - will manage database at /home/juan/nice/evaltsts/reports/2022-12-08-21-18-04-207093/run_1/ds.sqlite3
+21:18:29.513 INFO  Transceiver:404 - Creating transceiver for /172.16.223.43
+21:18:29.516 INFO  UDPTransceiver:99 - registering connection BootConnection(/172.16.223.5:44554 <--> /172.16.223.43:54321) for /172.16.223.5
+21:18:29.516 INFO  UDPTransceiver:99 - registering connection SCPConnection(/172.16.223.5:45425 <--> /172.16.223.43:17893) for /172.16.223.5
+21:18:29.517 INFO  Transceiver:560 - known connections to this transceiver: {/172.16.223.43=SCPConnection(/172.16.223.5:45425 <--> /172.16.223.43:17893)}
+21:18:29.586 INFO  FastExecuteDataSpecification:226  loading data onto 3 cores on board
+21:18:29.593 INFO  ThrottledConnection:74 - inter-message minimum time set to 50.0us
+21:18:29.595 INFO  ThrottledConnection:110 - created throttled connection to X:0 Y:0 (/172.16.223.43) from /172.16.223.5:42655; reprogramming tag #6 to point to this connection
+21:18:29.599 INFO  SystemRouterTableContext:73 - switching multicast routing on board at X:0 Y:0 to system mode
+21:18:29.599 INFO  SystemRouterTableContext:75 - will switch 48 cores
+21:18:29.634 INFO  NoDropPacketContext:106 - switching board at X:0 Y:0 (48 monitor cores) to non-drop mode (saved status: flags:1,timeout:3609.0225563909776 ns,emergencyTimeout:0.0 ns,drops:0)
+21:18:29.656 INFO  FastExecuteDataSpecification:483 (board:0,0) generated 1644 bytes to load onto X:0 Y:0 P:1 into memory starting at 0x60243838
+21:18:29.657 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 12 bytes in 1 packets using transaction 1
+21:18:29.660 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 4 bytes in 1 packets using transaction 2
+21:18:29.662 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 1184 bytes in 5 packets using transaction 3
+21:18:29.663 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 24 bytes in 1 packets using transaction 4
+21:18:29.666 INFO  FastExecuteDataSpecification:455 (board:0,0) loaded 5 memory regions (including metadata pseudoregion) for X:0 Y:0 P:1
+21:18:29.667 INFO  FastExecuteDataSpecification:483 (board:0,0) generated 504 bytes to load onto X:0 Y:0 P:2 into memory starting at 0x60243eac
+21:18:29.667 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 12 bytes in 1 packets using transaction 5
+21:18:29.667 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 60 bytes in 1 packets using transaction 6
+21:18:29.669 INFO  FastExecuteDataSpecification:455 (board:0,0) loaded 3 memory regions (including metadata pseudoregion) for X:0 Y:0 P:2
+21:18:29.670 INFO  FastExecuteDataSpecification:483 (board:0,0) generated 7856 bytes to load onto X:0 Y:0 P:5 into memory starting at 0x602440ac
+21:18:29.670 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 12 bytes in 1 packets using transaction 7
+21:18:29.671 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 4 bytes in 1 packets using transaction 8
+21:18:29.672 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 76 bytes in 1 packets using transaction 9
+21:18:29.672 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 44 bytes in 1 packets using transaction 10
+21:18:29.673 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 4 bytes in 1 packets using transaction 11
+21:18:29.673 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 20 bytes in 1 packets using transaction 12
+21:18:29.674 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 776 bytes in 3 packets using transaction 13
+21:18:29.675 INFO  FastExecuteDataSpecification:806 (board:0,0) streaming 516 bytes in 2 packets using transaction 14
+21:18:29.676 INFO  FastExecuteDataSpecification:455 (board:0,0) loaded 9 memory regions (including metadata pseudoregion) for X:0 Y:0 P:5
+21:18:29.676 INFO  FastExecuteDataSpecification:242 (board:0,0) finished sending data in for this board
+21:18:29.676 INFO  NoDropPacketContext:243 - switching board at X:0 Y:0 to standard mode
+21:18:29.683 INFO  SystemRouterTableContext:159 - switching multicast routing on board at X:0 Y:0 to standard mode
+21:18:29.692 INFO  Transceiver:2590 - total retries used: 0
