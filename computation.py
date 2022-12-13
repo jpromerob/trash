@@ -44,7 +44,7 @@ class Computer:
         self.run_time = int(args.runtime)*1000 # in [ms]
         self.w_fovea = args.fov
         self.width = args.width
-        self.height = math.ceil(self.width*3/4)
+        self.height = self.width + 0*math.ceil(self.width*3/4)
         self.pipe = args.port-3333
         self.chip_coords = (0,0)
         self.x_shift = 16
@@ -71,7 +71,7 @@ class Computer:
         self.database_port = database_port
         self.use_spif = not args.simulate_spif
         self.ev_counter = 0
-        self.stuff = []
+        self.onl = [] # output neuronal layer
         self.voltages = []
 
     def __enter__(self):
@@ -97,18 +97,21 @@ class Computer:
                 database_notify_port_num=self.database_port), label="retina",
                 structure=Grid2D(self.width / self.height))
 
-        pool_shape = (4,3)
+        pool_shape = (2,2)
         post_w, post_h = p.PoolDenseConnector.get_post_pool_shape((self.width, self.height), pool_shape)
+        print(f"{pool_shape} ... post: w={post_w}, h={post_h}")
         weights = np.array(create_weight_list(self.w_fovea, post_w, post_h))
         motor_conn = p.PoolDenseConnector(weights, pool_shape)
-        self.stuff = p.Population(len(self.labels), self.celltype(**self.cell_params), label="motor_neurons")
-        con_move = p.Projection(dev, self.stuff, motor_conn, p.PoolDense())
+        self.onl = p.Population(len(self.labels), self.celltype(**self.cell_params), label="motor_neurons")
+        con_move = p.Projection(dev, self.onl, motor_conn, p.PoolDense())
+        # pdb.set_trace()
 
-        self.stuff.record(["v","spikes"])
+        # self.onl.record(["v","spikes"])
+        self.onl[[0,1,2,3]].record(["v", "spikes"])
 
         # Spike reception (from SpiNNaker to CPU)
         live_spikes_receiver = p.external_devices.SpynnakerLiveSpikesConnection(receive_labels=["motor_neurons"], local_port=PORT_SPIN2CPU)
-        _ = p.external_devices.activate_live_output_for(self.stuff, database_notify_port_num=live_spikes_receiver.local_port)
+        _ = p.external_devices.activate_live_output_for(self.onl, database_notify_port_num=live_spikes_receiver.local_port)
         live_spikes_receiver.add_receive_callback("motor_neurons", self.receive_spikes_from_sim)
 
     def __exit__(self, e, b, t):
@@ -118,14 +121,18 @@ class Computer:
 
         for n_id in neuron_ids:
             self.ev_counter += 1
-            if n_id == 0:
-                print(f"Spike --> MN[{n_id}]")
+            # if n_id == 0:
+            print(f"Spike --> MN[{n_id}]")
             self.output_q.put(n_id, False)
 
     def run_sim(self):
         p.run(self.run_time)
+        print("\n\n\n")
         print(f"{self.ev_counter} events were output")
-        self.voltages = np.asarray(self.stuff.get_data("v").segments[0].filter(name="v")[0]).reshape(-1)
+        print("\n\n\n")
+        # pdb.set_trace()
+        for i in range(4):
+            self.voltages.append(np.asarray(self.onl[[i]].get_data("v").segments[0].filter(name="v")[0]).reshape(-1))
         # p.external_devices.run_forever(sync_time=0)
 
     def wrap_up(self):

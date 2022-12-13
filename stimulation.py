@@ -28,16 +28,18 @@ class Stimulator:
         self.spif_port = args.port
         self.w = args.width
         self.zzz = args.zzz
+        self.len = int(args.len)
         self.h = self.w + 0*int(math.ceil(args.width*3/4))
         self.input_q = multiprocessing.Queue()
         self.end_of_sim = end_of_sim
         self.use_spif = not args.simulate_spif
-
+        self.monitor = args.monitor
         self.running = multiprocessing.Value(ctypes.c_bool)
         self.running.value = False
         self.port = multiprocessing.Value(ctypes.c_uint32)
         self.port.value = 0
         self.ev_count = 0
+        self.start_t = 0
 
         self.p_i_data = multiprocessing.Process(target=self.set_inputs, args=())
         self.p_stream = multiprocessing.Process(target=self.launch_input_handler, args=())
@@ -72,26 +74,41 @@ class Stimulator:
     # This function is in charge of adding lists of events to buffer
     def set_inputs(self):
 
-        time.sleep(19)
-        print("\n\n\n")
-        print("Waking up")
-        print("\n\n\n")
-        time.sleep(1)
-        
-        cx = self.w
-        cy = self.h
-        l = 4
-        while self.end_of_sim.value == 0:
+        if self.monitor:
+            print("Monitor!!!")
+            time.sleep(1)
+        else:
+            time.sleep(4)
+            print("\n\n\n")
+            print("Waking up")
+            print("\n\n\n")
+            time.sleep(1)
+
+
+
+        # ev_per_pack = 1
+        # delta_t = (self.zzz/1000)/(self.w*self.h)*ev_per_pack
+        # while self.end_of_sim.value == 0:            
             
-            # cx += 1
-            # cy += 1
-            # if cx >= self.w-l:
-            #     cx = 0
-            # if cy >= self.h-l:
-            #     cy = 0
-            # events = self.generate_events(cx, cy, l)
-            
-            events = self.generate_events(0,0,1)
+        #     events = []
+        #     ev_count = 0
+        #     for x in range(self.w): 
+        #         for y in range(self.h):  
+        #             events.append((0,0))
+        #             ev_count +=1 
+        #             if(ev_count >= ev_per_pack):
+        #                 self.input_q.put(events)
+        #                 events = []
+        #                 ev_count = 0
+        #                 time.sleep(delta_t)
+
+        # print("No more inputs to be sent")
+
+        while self.end_of_sim.value == 0:  
+            events = []
+            for x in range(self.len):
+                for y in range(self.len):
+                    events.append((x, y))
             self.input_q.put(events)
             time.sleep(self.zzz/1000)
         print("No more inputs to be sent")
@@ -102,6 +119,8 @@ class Stimulator:
 
         NO_TIMESTAMP = 0x80000000
         polarity = 1
+
+        looking_for_first_ev = True
 
         if self.use_spif:
             print(f"Using SPIF on {self.ip_addr}:{self.spif_port}")
@@ -116,6 +135,9 @@ class Stimulator:
             events = []
             available_data = False
             while not self.input_q.empty():
+                if looking_for_first_ev:
+                    looking_for_first_ev = False
+                    self.start_t = time.time()
                 events = self.input_q.get(False)
                 available_data = True
 
@@ -143,8 +165,8 @@ class Stimulator:
             if self.use_spif:
                 if available_data:
                     sock.sendto(data, (self.ip_addr, self.spif_port))
-                    if self.ev_count%10 == 0:
-                        print(f"Event #{self.ev_count}  sent")
+                    # if self.ev_count%1000 == 0:
+                    #     print(f"Event #{self.ev_count}  sent")
                     available_data = False
                 
             elif spikes:
@@ -152,7 +174,11 @@ class Stimulator:
 
         print("No more events to be created")
         if self.use_spif:
-            print(f"{self.ev_count} events sent")
+            print(f"start: {self.start_t}")
+            print(f"end: {time.time()}")
+            diff_t = (time.time() - self.start_t)
+            print(f"{self.ev_count} events sent in {diff_t} seconds")
+            print(f"{self.ev_count/diff_t} ev/sec")
             sock.close()
         else:
             connection.close()

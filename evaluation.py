@@ -24,24 +24,13 @@ class Counter:
         
         print("Starting to count some stuff\n")
 
-        dt = 1.0
-
-        start = time.time()
-        current_t = time.time()
-        next_check = current_t + dt
-
-        ev_counter = 0
-
+        # ev_counter = 0
         while self.end_of_sim.value == 0:
             while not self.output_q.empty():
-                ev_counter += 1
                 out = self.output_q.get(False)
-                print(f"Event #{ev_counter} received ...")
-                current_t = time.time()
+                # ev_counter += 1
+                # print(f"Event #{ev_counter} received ...")
 
-            if current_t >= next_check:
-                # print(f"Checking @ t={current_t}")
-                next_check = current_t + dt
 
 
         print("No more outputs to be received")
