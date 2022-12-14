@@ -24,6 +24,8 @@ def parse_args():
     parser.add_argument('-l', '--len', type=int, help="length of activity square", default=16)
     parser.add_argument('-m', '--monitor', action="store_true", help="Monitor Stimulation")
     parser.add_argument('-n', '--npc', type=int, help="# Neurons Per Core", default=4)
+    parser.add_argument('-o', '--pool', type=int, help="Pool size", default=2)
+    parser.add_argument('-q', '--board-quantity', type=int, help="boards required", default=1)
     parser.add_argument('-p', '--port', type=int, help="SPIF's port", default=3333)
     parser.add_argument('-r', '--runtime', type=int, help="Run Time, in seconds", default=1)
     parser.add_argument('-s', '--simulate-spif', action="store_true", help="Simulate SPIF")

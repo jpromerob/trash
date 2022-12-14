@@ -42,20 +42,31 @@ def create_weight_list(w_fovea, w, h):
 class Computer:
 
     def __init__(self, args, output_q, database_port):
+
+        # SpiNNaker (Simulation) parameters
         self.run_time = int(args.runtime)*1000 # in [ms]
         self.w_fovea = args.fov
+        self.nb_neurons_core = args.npc
+        self.dimensions = args.dimensions
+        self.board_quantity = args.board_quantity
+
+        # SPIF parameters
         self.width = args.width
         self.height = self.width + 0*math.ceil(self.width*3/4)
         self.pipe = args.port-3333
         self.chip_coords = (0,0)
         self.x_shift = 16
         self.y_shift = 0
-        self.output_q = output_q
         self.subheight = 2
-        self.subwidth = 2*self.subheight
-        self.nb_neurons_core = args.npc
-        self.dimensions = args.dimensions
+        self.subwidth = 4
+        self.use_spif = not args.simulate_spif
+
+        # SpikeInjector Parameters
+        self.database_port = database_port
+
+        # SNN parameters
         self.celltype = p.IF_curr_exp
+        self.pool = args.pool
         self.tau = args.tau
         self.vth = args.vth
         self.cell_params = {'tau_m': self.tau,
@@ -69,8 +80,9 @@ class Computer:
                             'i_offset': 0.0
                             }
         self.labels = ["go_right", "go_left", "go_up", "go_down"]
-        self.database_port = database_port
-        self.use_spif = not args.simulate_spif
+        
+        # 'Infrastructure' Parameters   
+        self.output_q = output_q
         self.ev_counter = 0
         self.onl = [] # output neuronal layer
         self.voltages = []
@@ -78,7 +90,7 @@ class Computer:
     def __enter__(self):
 
         # Set up PyNN
-        p.setup(timestep=1, n_boards_required=1)
+        p.setup(timestep=1, n_boards_required=self.board_quantity)
 
         # Set the number of neurons per core
         if self.dimensions == 1:
