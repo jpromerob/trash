@@ -33,7 +33,6 @@ class Stimulator:
         self.input_q = multiprocessing.Queue()
         self.end_of_sim = end_of_sim
         self.use_spif = not args.simulate_spif
-        self.monitor = args.monitor
         self.running = multiprocessing.Value(ctypes.c_bool)
         self.running.value = False
         self.port = multiprocessing.Value(ctypes.c_uint32)
@@ -74,36 +73,6 @@ class Stimulator:
     # This function is in charge of adding lists of events to buffer
     def set_inputs(self):
 
-        if self.monitor:
-            print("Monitor!!!")
-            time.sleep(1)
-        else:
-            time.sleep(4)
-            print("\n\n\n")
-            print("Waking up")
-            print("\n\n\n")
-            time.sleep(1)
-
-
-
-        # ev_per_pack = 1
-        # delta_t = (self.zzz/1000)/(self.w*self.h)*ev_per_pack
-        # while self.end_of_sim.value == 0:            
-            
-        #     events = []
-        #     ev_count = 0
-        #     for x in range(self.w): 
-        #         for y in range(self.h):  
-        #             events.append((0,0))
-        #             ev_count +=1 
-        #             if(ev_count >= ev_per_pack):
-        #                 self.input_q.put(events)
-        #                 events = []
-        #                 ev_count = 0
-        #                 time.sleep(delta_t)
-
-        # print("No more inputs to be sent")
-
         while self.end_of_sim.value == 0:  
             events = []
             for x in range(self.len):
@@ -112,6 +81,17 @@ class Stimulator:
             self.input_q.put(events)
             time.sleep(self.zzz/1000)
         print("No more inputs to be sent")
+
+        # while self.end_of_sim.value == 0:  
+        #     events = []
+        #     idx = 0
+        #     events.append((idx+0, idx+0))
+        #     events.append((idx+0, idx+1))
+        #     events.append((idx+1, idx+0))
+        #     events.append((idx+1, idx+1))
+        #     self.input_q.put(events)
+        #     time.sleep(self.zzz/1000)
+        # print("No more inputs to be sent")
 
 
     # This function is in charge of cerating UDP event frames and send them to SPIF
@@ -172,15 +152,13 @@ class Stimulator:
             elif spikes:
                 connection.send_spikes("retina", spikes)
 
-        print("No more events to be created")
         if self.use_spif:
-            print(f"start: {self.start_t}")
-            print(f"end: {time.time()}")
-            diff_t = (time.time() - self.start_t)
+            diff_t = round(time.time() - self.start_t,3)
             print(f"{self.ev_count} events sent in {diff_t} seconds")
-            print(f"{self.ev_count/diff_t} ev/sec")
+            print(f"{int(self.ev_count/diff_t)} ev/sec")
             sock.close()
         else:
             connection.close()
+        print("No more events to be created")
 
 

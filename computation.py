@@ -30,7 +30,7 @@ def create_weight_list(w_fovea, w, h):
     for y in range(h):
         for x in range(w):
             for post_idx in range(4):
-                weight = 0.00001
+                weight = 0.0
                 if post_idx == 0:
                     if x < 2 and y < 2:
                         weight = w_fovea
