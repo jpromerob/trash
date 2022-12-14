@@ -24,14 +24,13 @@ class Counter:
         
         print("Starting to count some stuff\n")
 
-        # ev_counter = 0
+        ev_counter = 0
         while self.end_of_sim.value == 0:
             while not self.output_q.empty():
                 out = self.output_q.get(False)
-                # ev_counter += 1
-                # print(f"Event #{ev_counter} received ...")
-
-
+                ev_counter += 1
+                if ev_counter%1000 == 0:
+                    print(f"Event #{ev_counter} received")
 
         print("No more outputs to be received")
 

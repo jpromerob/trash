@@ -31,8 +31,9 @@ def create_weight_list(w_fovea, w, h):
         for x in range(w):
             for post_idx in range(4):
                 weight = 0.00001
-                if post_idx == 0 and x == 0 and y == 0:
-                    weight = w_fovea
+                if post_idx == 0:
+                    if x < 2 and y < 2:
+                        weight = w_fovea
                 weight_list.append(weight)
 
     return weight_list
@@ -101,10 +102,10 @@ class Computer:
         post_w, post_h = p.PoolDenseConnector.get_post_pool_shape((self.width, self.height), pool_shape)
         print(f"{pool_shape} ... post: w={post_w}, h={post_h}")
         weights = np.array(create_weight_list(self.w_fovea, post_w, post_h))
+        # pdb.set_trace()
         motor_conn = p.PoolDenseConnector(weights, pool_shape)
         self.onl = p.Population(len(self.labels), self.celltype(**self.cell_params), label="motor_neurons")
         con_move = p.Projection(dev, self.onl, motor_conn, p.PoolDense())
-        # pdb.set_trace()
 
         # self.onl.record(["v","spikes"])
         self.onl[[0,1,2,3]].record(["v", "spikes"])
@@ -122,7 +123,7 @@ class Computer:
         for n_id in neuron_ids:
             self.ev_counter += 1
             # if n_id == 0:
-            print(f"Spike --> MN[{n_id}]")
+            # print(f"Spike --> MN[{n_id}]")
             self.output_q.put(n_id, False)
 
     def run_sim(self):
