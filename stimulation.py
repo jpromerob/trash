@@ -28,7 +28,9 @@ class Stimulator:
         self.spif_port = args.port
         self.w = args.width
         self.zzz = args.zzz
-        self.len = int(args.len)
+        self.cx = args.cx
+        self.cy = args.cy
+        self.len = min(int(args.len), int(args.width))
         self.h = self.w + 0*int(math.ceil(args.width*3/4))
         self.input_q = multiprocessing.Queue()
         self.end_of_sim = end_of_sim
@@ -72,27 +74,20 @@ class Stimulator:
 
     # This function is in charge of adding lists of events to buffer
     def set_inputs(self):
-
+        cycle_count = 0
         while self.end_of_sim.value == 0:  
             events = []
             for x in range(self.len):
                 for y in range(self.len):
-                    events.append((x, y))
+                    events.append((self.cx + x, self.cy + y))
             self.input_q.put(events)
             time.sleep(self.zzz/1000)
+            if cycle_count == 0:
+                print("\n\n\n\n\n\n\n\n\n")
+                print(events)
+                print("\n\n\n\n\n\n\n\n\n")
+            cycle_count += 1
         print("No more inputs to be sent")
-
-        # while self.end_of_sim.value == 0:  
-        #     events = []
-        #     idx = 0
-        #     events.append((idx+0, idx+0))
-        #     events.append((idx+0, idx+1))
-        #     events.append((idx+1, idx+0))
-        #     events.append((idx+1, idx+1))
-        #     self.input_q.put(events)
-        #     time.sleep(self.zzz/1000)
-        # print("No more inputs to be sent")
-
 
     # This function is in charge of cerating UDP event frames and send them to SPIF
     def launch_input_handler(self):

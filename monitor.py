@@ -17,6 +17,8 @@ def parse_args():
 
     # Stimulation Parameters
     parser.add_argument('-l', '--len', type=int, help="length of activity square", default=16)
+    parser.add_argument('-x', '--cx', type=int, help="x coordinate of top left corner", default=0)
+    parser.add_argument('-y', '--cy', type=int, help="y coordinate of top left corner", default=0)
     parser.add_argument('-z', '--zzz', type=int, help="sleep time ms", default=20)
     
     # SPIF Parameters

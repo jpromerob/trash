@@ -23,21 +23,34 @@ PORT_SPIN2CPU = int(random.randint(12000,15000))
 '''
 This function creates a list of weights to be used when connecting pixels to motor neurons
 '''
-def create_weight_list(w_fovea, w, h):
+def create_weight_list(w_fovea, w, h, idx):
 
     weight_list = []
 
+    blahblah = 0
     for y in range(h):
         for x in range(w):
             for post_idx in range(4):
+                
                 weight = 0.0
-                if post_idx == 0:
+                if post_idx == idx:
                     if x < 2 and y < 2:
+                        print(f"Index here: {blahblah} for x:{x}, y:{y}")
                         weight = w_fovea
                 weight_list.append(weight)
+                blahblah +=1
 
     return weight_list
 
+
+        
+def create_weight_array(w_fovea, nb_synapses, idx):
+    weight_array = np.zeros(nb_synapses, dtype=float)
+    weight_array[0] = w_fovea
+    weight_array[4] = w_fovea
+    weight_array[32] = w_fovea
+    weight_array[36] = w_fovea
+    return weight_array
 
 class Computer:
 
@@ -110,10 +123,11 @@ class Computer:
                 database_notify_port_num=self.database_port), label="retina",
                 structure=Grid2D(self.width / self.height))
 
-        pool_shape = (2,2)
+        pool_shape = (self.pool-2, self.pool-2)
         post_w, post_h = p.PoolDenseConnector.get_post_pool_shape((self.width, self.height), pool_shape)
         print(f"{pool_shape} ... post: w={post_w}, h={post_h}")
-        weights = np.array(create_weight_list(self.w_fovea, post_w, post_h))
+        weights = np.array(create_weight_list(self.w_fovea, post_w, post_h, 0))
+        # weights = np.array(create_weight_array(self.w_fovea, post_w*post_h*len(self.labels), 0))
         # pdb.set_trace()
         motor_conn = p.PoolDenseConnector(weights, pool_shape)
         self.onl = p.Population(len(self.labels), self.celltype(**self.cell_params), label="motor_neurons")
