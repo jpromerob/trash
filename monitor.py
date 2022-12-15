@@ -14,6 +14,7 @@ def parse_args():
 
     # General parameters
     parser.add_argument('-w', '--width', type=int, help="Image size (in px)", default=16)
+    parser.add_argument('-r', '--runtime', type=int, help="Run Time, in seconds", default=2)
 
     # Stimulation Parameters
     parser.add_argument('-l', '--len', type=int, help="length of activity square", default=16)

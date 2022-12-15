@@ -23,24 +23,95 @@ PORT_SPIN2CPU = int(random.randint(12000,15000))
 '''
 This function creates a list of weights to be used when connecting pixels to motor neurons
 '''
-def create_weight_list(w_fovea, w, h, idx):
+
+def create_conn_list(w_fovea, w, h, n=0):
+    conn_list = []
+    
+
+    delay = 1 # 1 [ms]
+    nb_col = math.ceil(w/n)
+    nb_row = math.ceil(h/n)
+
+    pre_idx = -1
+    for h_block in range(nb_row):
+        for v_block in range(nb_col):
+            for row in range(n):
+                for col in range(n):
+                    x = v_block*n+col
+                    y = h_block*n+row
+                    if x<w and y<h:
+                        # print(f"{pre_idx} -> ({x},{y})")
+                        pre_idx += 1
+
+                        for post_idx in range(4):
+
+                            weight = 0.000001
+                            x_weight = 2*w_fovea*(abs((x+0.5)-w/2)/(w-1))
+                            y_weight = 2*w_fovea*(abs((y+0.5)-h/2)/(h-1))
+
+                            # Move right (when stimulus on the left 'hemisphere')    
+                            if post_idx == 0:
+                                if (x+0.5) < w/2:
+                                    weight = x_weight
+                                        
+                            # Move Left (when stimulus on the right 'hemisphere')
+                            if post_idx == 1:
+                                if (x+0.5) > w/2:
+                                    weight = x_weight
+                                                
+                            # Move up (when stimulus on the bottom 'hemisphere')    
+                            if post_idx == 2: 
+                                if (y+0.5) > h/2: # higher pixel --> bottom of image
+                                    weight = y_weight
+                            
+                            # Move down (when stimulus on the top 'hemisphere') 
+                            if post_idx == 3:
+                                if (y+0.5) < h/2: # lower pixel --> top of image
+                                    weight = y_weight
+                            
+                            conn_list.append(weight)
+        
+    return conn_list
+
+def create_weight_list(w_fovea, w, h):
 
     weight_list = []
 
-    blahblah = 0
     for y in range(h):
         for x in range(w):
-            for post_idx in range(4):
+            for mn in range(4):
                 
                 weight = 0.0
-                if post_idx == idx:
-                    if x < 1 and y < 1:
-                        print(f"Index here: {blahblah} for x:{x}, y:{y}")
+                if mn == 0 and x == 0:                    
+                        weight = w_fovea
+                if mn == 1 and x == 1:                    
+                        weight = w_fovea
+                if mn == 2 and y == 0:                    
+                        weight = w_fovea
+                if mn == 3 and y == 1:                    
                         weight = w_fovea
                 weight_list.append(weight)
-                blahblah +=1
 
     return weight_list
+
+# def create_weight_list(w_fovea, w, h):
+
+#     weight_list = []
+
+#     blahblah = 0
+#     for y in range(h):
+#         for x in range(w):
+#             for post_idx in range(4):
+                
+#                 weight = 0.0
+#                 if post_idx == 0:
+#                     if x < 1 and y < 1:
+#                         print(f"Index here: {blahblah} for x:{x}, y:{y}")
+#                         weight = w_fovea
+#                 weight_list.append(weight)
+#                 blahblah +=1
+
+#     return weight_list
 
 class Computer:
 
@@ -113,11 +184,14 @@ class Computer:
                 database_notify_port_num=self.database_port), label="retina",
                 structure=Grid2D(self.width / self.height))
 
-        pool_shape = (self.pool, self.pool)
+        if self.pool == 0:
+            pool_shape = (int(self.width/2), int(self.height/2))
+        else:
+            pool_shape = (self.pool, self.pool)
         post_w, post_h = p.PoolDenseConnector.get_post_pool_shape((self.width, self.height), pool_shape)
         print(f"{pool_shape} ... post: w={post_w}, h={post_h}")
-        weights = np.array(create_weight_list(self.w_fovea, post_w, post_h, 0))
-        # weights = np.array(create_weight_array(self.w_fovea, post_w*post_h*len(self.labels), 0))
+        # weights = np.array(create_weight_list(self.w_fovea, post_w, post_h), dtype=float)
+        weights = np.array(create_conn_list(self.w_fovea, post_w, post_h, self.nb_neurons_core), dtype=float)
         # pdb.set_trace()
         motor_conn = p.PoolDenseConnector(weights, pool_shape)
         self.onl = p.Population(len(self.labels), self.celltype(**self.cell_params), label="motor_neurons")
