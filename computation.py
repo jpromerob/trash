@@ -34,23 +34,13 @@ def create_weight_list(w_fovea, w, h, idx):
                 
                 weight = 0.0
                 if post_idx == idx:
-                    if x < 2 and y < 2:
+                    if x < 1 and y < 1:
                         print(f"Index here: {blahblah} for x:{x}, y:{y}")
                         weight = w_fovea
                 weight_list.append(weight)
                 blahblah +=1
 
     return weight_list
-
-
-        
-def create_weight_array(w_fovea, nb_synapses, idx):
-    weight_array = np.zeros(nb_synapses, dtype=float)
-    weight_array[0] = w_fovea
-    weight_array[4] = w_fovea
-    weight_array[32] = w_fovea
-    weight_array[36] = w_fovea
-    return weight_array
 
 class Computer:
 
@@ -123,7 +113,7 @@ class Computer:
                 database_notify_port_num=self.database_port), label="retina",
                 structure=Grid2D(self.width / self.height))
 
-        pool_shape = (self.pool-2, self.pool-2)
+        pool_shape = (self.pool, self.pool)
         post_w, post_h = p.PoolDenseConnector.get_post_pool_shape((self.width, self.height), pool_shape)
         print(f"{pool_shape} ... post: w={post_w}, h={post_h}")
         weights = np.array(create_weight_list(self.w_fovea, post_w, post_h, 0))
