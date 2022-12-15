@@ -23,19 +23,23 @@ PORT_SPIN2CPU = int(random.randint(12000,15000))
 '''
 This function creates a list of weights to be used when connecting pixels to motor neurons
 '''
-def create_weight_list(w_fovea, w, h, idx):
+def create_weight_list(w_fovea, w, h):
 
     weight_list = []
 
     blahblah = 0
     for y in range(h):
         for x in range(w):
-            for post_idx in range(4):
+            for mn in range(4):
                 
                 weight = 0.0
-                if post_idx == idx:
-                    if x < 1 and y < 1:
-                        print(f"Index here: {blahblah} for x:{x}, y:{y}")
+                if mn == 0 and x == 0:                    
+                        weight = w_fovea
+                if mn == 1 and x == 1:                    
+                        weight = w_fovea
+                if mn == 2 and y == 0:                    
+                        weight = w_fovea
+                if mn == 3 and y == 1:                    
                         weight = w_fovea
                 weight_list.append(weight)
                 blahblah +=1
@@ -95,12 +99,7 @@ class Computer:
         # Set up PyNN
         p.setup(timestep=1, n_boards_required=self.board_quantity)
 
-        # Set the number of neurons per core
-        if self.dimensions == 1:
-            p.set_number_of_neurons_per_core(p.IF_curr_exp, self.nb_neurons_core)
-
-        if self.dimensions == 2:
-            p.set_number_of_neurons_per_core(p.IF_curr_exp, (self.nb_neurons_core, self.nb_neurons_core))
+        p.set_number_of_neurons_per_core(p.IF_curr_exp, (self.nb_neurons_core, self.nb_neurons_core))
 
         # Set SPIF
         if self.use_spif:
@@ -113,12 +112,12 @@ class Computer:
                 database_notify_port_num=self.database_port), label="retina",
                 structure=Grid2D(self.width / self.height))
 
-        pool_shape = (self.pool, self.pool)
+
+        if self.pool == 0:
+            pool_shape = (int(self.width/2), int(self.height/2))
         post_w, post_h = p.PoolDenseConnector.get_post_pool_shape((self.width, self.height), pool_shape)
-        print(f"{pool_shape} ... post: w={post_w}, h={post_h}")
-        weights = np.array(create_weight_list(self.w_fovea, post_w, post_h, 0))
-        # weights = np.array(create_weight_array(self.w_fovea, post_w*post_h*len(self.labels), 0))
         # pdb.set_trace()
+        weights = np.array(create_weight_list(self.w_fovea, post_w, post_h))
         motor_conn = p.PoolDenseConnector(weights, pool_shape)
         self.onl = p.Population(len(self.labels), self.celltype(**self.cell_params), label="motor_neurons")
         con_move = p.Projection(dev, self.onl, motor_conn, p.PoolDense())

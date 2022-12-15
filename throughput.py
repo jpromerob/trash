@@ -19,12 +19,13 @@ def parse_args():
 
     # General parameters
     parser.add_argument('-w', '--width', type=int, help="Image size (in px)", default=16)
+    parser.add_argument('-r', '--runtime', type=int, help="Run Time, in seconds", default=2)
 
     # Stimulation Parameters
     parser.add_argument('-l', '--len', type=int, help="length of activity square", default=4)
     parser.add_argument('-x', '--cx', type=int, help="x coordinate of top left corner", default=0)
     parser.add_argument('-y', '--cy', type=int, help="y coordinate of top left corner", default=0)
-    parser.add_argument('-z', '--zzz', type=int, help="sleep time ms", default=20)
+    parser.add_argument('-z', '--zzz', type=float, help="sleep time ms", default=20.0)
 
     # SPIF Parameters
     parser.add_argument('-i', '--ip', type= str, help="SPIF's IP address", default="172.16.223.122")
@@ -34,10 +35,9 @@ def parse_args():
     # Computation Parameters
     parser.add_argument('-d', '--dimensions', type=int, help="Dimensions (1D, 2D)", default=2)
     parser.add_argument('-f', '--fov', type=float, help="w fovea", default=4.8)
-    parser.add_argument('-n', '--npc', type=int, help="# Neurons Per Core", default=4)
-    parser.add_argument('-o', '--pool', type=int, help="Pool size", default=4)
+    parser.add_argument('-n', '--npc', type=int, help="# Neurons Per Core", default=16)
+    parser.add_argument('-o', '--pool', type=int, help="Pool size", default=0)
     parser.add_argument('-q', '--board-quantity', type=int, help="boards required", default=1)
-    parser.add_argument('-r', '--runtime', type=int, help="Run Time, in seconds", default=2)
     parser.add_argument('-t', '--tau', type=int, help="tau_m", default=20)
     parser.add_argument('-v', '--vth', type=int, help="v_th", default=-50)
 
@@ -69,38 +69,42 @@ if __name__ == '__main__':
     
 
 
-
     ##################################################################################################
     #                                           SOME PLOTTING
     ##################################################################################################
     spikes_displayed = 8
     vrst = -65
+    fig, axs = plt.subplots(4)
     for i in range(4):
         sample = spin.voltages[i]
-        plt.plot(spin.voltages[i])
+        axs[i].plot(spin.voltages[i])
+        axs[i].set_ylim([vrst-5, args.vth+5])
+        axs[i].set_xlim([0,min(200, len(sample))])
     
-    plt.title(f"l: {min(args.len, args.width)} | f: {args.fov} | w: {args.width} | z: {args.zzz} | o: {args.pool} | x: {args.cx} | y: {args.cy}")
+    fig.suptitle(f"l: {min(args.len, args.width)} | f: {args.fov} | w: {args.width} | z: {args.zzz} | o: {args.pool} | x: {args.cx} | y: {args.cy}")
 
-    
-    sample = spin.voltages[0]
-    idx = []
-    spike_count = 0
-    for i in range(len(sample)-3):
-        if abs(sample[i] - sample[i+1]) > 0.8*(args.vth-vrst):
-            idx.append(i+2)
-            spike_count += 1
-            if spike_count >= spikes_displayed:
-                break
-    
-    if len(idx) > 0:
-        idx = np.flip(np.asarray(idx))
-        for j in range(len(idx)):
-            plt.plot(sample[0:idx[j]])
-            plt.xlim(0,np.max(idx))
-    else:
-        plt.xlim(0,min(200, len(sample)))
-    
-    plt.ylim(vrst-5, args.vth+5)
-    plt.grid()
-    # plt.savefig("images/outneuron_4_spikes.png")
     plt.show()
+    # pdb.set_trace()
+    
+    # sample = spin.voltages[0]
+    # idx = []
+    # spike_count = 0
+    # for i in range(len(sample)-3):
+    #     if abs(sample[i] - sample[i+1]) > 0.8*(args.vth-vrst):
+    #         idx.append(i+2)
+    #         spike_count += 1
+    #         if spike_count >= spikes_displayed:
+    #             break
+    
+    # if len(idx) > 0:
+    #     idx = np.flip(np.asarray(idx))
+    #     for j in range(len(idx)):
+    #         plt.plot(sample[0:idx[j]])
+    #         plt.xlim(0,np.max(idx))
+    # else:
+    #     plt.xlim(0,min(200, len(sample)))
+    
+    # plt.ylim(vrst-5, args.vth+5)
+    # plt.grid()
+    # # plt.savefig("images/outneuron_4_spikes.png")
+    # plt.show()

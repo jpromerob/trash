@@ -14,12 +14,13 @@ def parse_args():
 
     # General parameters
     parser.add_argument('-w', '--width', type=int, help="Image size (in px)", default=16)
+    parser.add_argument('-r', '--runtime', type=int, help="Run Time, in seconds", default=2)
 
     # Stimulation Parameters
     parser.add_argument('-l', '--len', type=int, help="length of activity square", default=16)
     parser.add_argument('-x', '--cx', type=int, help="x coordinate of top left corner", default=0)
     parser.add_argument('-y', '--cy', type=int, help="y coordinate of top left corner", default=0)
-    parser.add_argument('-z', '--zzz', type=int, help="sleep time ms", default=20)
+    parser.add_argument('-z', '--zzz', type=float, help="sleep time ms", default=20.0)
     
     # SPIF Parameters
     parser.add_argument('-i', '--ip', type= str, help="SPIF's IP address", default="172.16.222.199")
@@ -42,6 +43,6 @@ if __name__ == '__main__':
     stim = Stimulator(args, end_of_sim)
 
     with stim:
-        time.sleep(5)
+        time.sleep(args.runtime)
 
 
