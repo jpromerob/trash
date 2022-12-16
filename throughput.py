@@ -36,7 +36,7 @@ def parse_args():
     parser.add_argument('-d', '--dimensions', type=int, help="Dimensions (1D, 2D)", default=2)
     parser.add_argument('-f', '--fov', type=float, help="w fovea", default=4.8)
     parser.add_argument('-n', '--npc', type=int, help="# Neurons Per Core", default=16)
-    parser.add_argument('-o', '--pool', type=int, help="Pool size", default=4)
+    parser.add_argument('-o', '--pool', type=int, help="Pool size", default=0)
     parser.add_argument('-q', '--board-quantity', type=int, help="boards required", default=1)
     parser.add_argument('-t', '--tau', type=int, help="tau_m", default=20)
     parser.add_argument('-v', '--vth', type=int, help="v_th", default=-50)
@@ -84,7 +84,7 @@ if __name__ == '__main__':
         axs[i].set_ylabel('V_m')
 
         axs[i].set_ylim([vrst-5, args.vth+5])
-        axs[i].set_xlim([0,min(200, len(sample))])
+        axs[i].set_xlim([0,min(2000, len(sample))])
         axs[i].grid()
     
     fig.suptitle(f"l: {min(args.len, args.width)} | f: {args.fov} | w: {args.width}  | o: {args.pool} | z: {args.zzz} | x: {args.cx} | y: {args.cy}")

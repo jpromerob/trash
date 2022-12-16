@@ -184,15 +184,20 @@ class Computer:
                 database_notify_port_num=self.database_port), label="retina",
                 structure=Grid2D(self.width / self.height))
 
+
+        print("\n\n\n")
         if self.pool == 0:
+            print("Pool == 0")
             pool_shape = (int(self.width/2), int(self.height/2))
         else:
+            print("Pool != 0")
             pool_shape = (self.pool, self.pool)
         post_w, post_h = p.PoolDenseConnector.get_post_pool_shape((self.width, self.height), pool_shape)
         print(f"{pool_shape} ... post: w={post_w}, h={post_h}")
-        # weights = np.array(create_weight_list(self.w_fovea, post_w, post_h), dtype=float)
+        print("\n\n\n")
+        time.sleep(2)
         weights = np.array(create_conn_list(self.w_fovea, post_w, post_h, self.nb_neurons_core), dtype=float)
-        # pdb.set_trace()
+        
         motor_conn = p.PoolDenseConnector(weights, pool_shape)
         self.onl = p.Population(len(self.labels), self.celltype(**self.cell_params), label="motor_neurons")
         con_move = p.Projection(dev, self.onl, motor_conn, p.PoolDense())
@@ -221,7 +226,7 @@ class Computer:
         print("\n\n\n")
         print(f"{self.ev_counter} events were output")
         print("\n\n\n")
-        # pdb.set_trace()
+        pdb.set_trace()
         for i in range(4):
             self.voltages.append(np.asarray(self.onl[[i]].get_data("v").segments[0].filter(name="v")[0]).reshape(-1))
         # p.external_devices.run_forever(sync_time=0)

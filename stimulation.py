@@ -1,4 +1,3 @@
-
 import multiprocessing
 import socket
 import pdb
@@ -26,12 +25,12 @@ class Stimulator:
         self.display = []
         self.ip_addr = args.ip
         self.spif_port = args.port
-        self.w = args.width
+        self.width = args.width
+        self.height = self.width # int(math.ceil(args.width*3/4))
         self.zzz = args.zzz
         self.cx = args.cx
         self.cy = args.cy
         self.len = min(int(args.len), int(args.width))
-        self.h = self.w + 0*int(math.ceil(args.width*3/4))
         self.input_q = multiprocessing.Queue()
         self.end_of_sim = end_of_sim
         self.use_spif = not args.simulate_spif
@@ -42,7 +41,7 @@ class Stimulator:
         self.ev_count = 0
         self.start_t = 0
 
-        self.p_i_data = multiprocessing.Process(target=self.set_inputs, args=())
+        # self.p_i_data = multiprocessing.Process(target=self.set_inputs_classic, args=())
         self.p_stream = multiprocessing.Process(target=self.launch_input_handler, args=())
         self.p_stream.start()
         if not self.use_spif:
@@ -56,31 +55,33 @@ class Stimulator:
         self.running.value = False
 
     def __enter__(self):
-        self.p_i_data.start()
+        # self.p_i_data.start()
+        a = 1
 
     def __exit__(self, e, b, t):
         self.end_of_sim.value = 1
-        self.p_i_data.join()
+        # self.p_i_data.join()
         self.p_stream.join()
 
-    def generate_events(self, cx, cy, l):
+            
+    def get_inputs_classic(self):
         
-        events = []
-        for x in range(l):
-            for y in range(l):
-                events.append((x+cx, y+cy))
-        
-        return events
-
-    # This function is in charge of adding lists of events to buffer
-    def set_inputs(self):
         while self.end_of_sim.value == 0:  
-            events = []
             for x in range(self.len):
                 for y in range(self.len):
-                    events.append((self.cx + x, self.cy + y))
-            self.input_q.put(events)
-            time.sleep(self.zzz/1000)
+                    yield(self.cx + x, self.cy + y)
+            time.sleep(self.zzz/1000/(self.len*self.len))
+            
+        print("No more inputs to be sent")
+
+    
+    # This function is in charge of adding lists of events to buffer
+    def get_inputs_noise(self):
+        while self.end_of_sim.value == 0:  
+            x = np.random.randint(self.width, size=1)[0]
+            y = np.random.randint(self.height, size=1)[0]
+            yield(x,y)
+
         print("No more inputs to be sent")
 
     # This function is in charge of cerating UDP event frames and send them to SPIF
@@ -100,16 +101,12 @@ class Stimulator:
             connection.add_start_resume_callback("retina", self.start_handler)
             connection.add_pause_stop_callback("retina", self.end_handler)
 
+        ev_source_classic = self.get_inputs_classic()
+        ev_source_noise = self.get_inputs_noise()
+        
+        pack_sz = 16*16
         while self.end_of_sim.value == 0:
-            events = []
-            available_data = False
-            while not self.input_q.empty():
-                if looking_for_first_ev:
-                    looking_for_first_ev = False
-                    self.start_t = time.time()
-                events = self.input_q.get(False)
-                available_data = True
-
+            
             if not self.use_spif and not self.running.value:
                 continue
 
@@ -118,25 +115,34 @@ class Stimulator:
             else:
                 spikes = []
 
-            for e in events:
-                x = e[0]
-                y = e[1]
-                self.ev_count += 1
-                if self.use_spif:
+            for idx in range(pack_sz):
+                
+                if looking_for_first_ev:
+                    looking_for_first_ev = False
+                    self.start_t = time.time()
+                try:
+                    if self.ev_count%1000 == 0:
+                        e = next(ev_source_noise)    
+                    else:
+                        e = next(ev_source_classic)
+                    x = e[0]
+                    y = e[1]
+                    self.ev_count += 1
+                    if self.use_spif:
 
-                    packed = (
-                        NO_TIMESTAMP + (polarity << P_SHIFT) +
-                        (y << Y_SHIFT) + (x << X_SHIFT))
-                    data += pack("<I", packed)
-                else:
-                    spikes.append((y * self.w) + x)
+                        packed = (
+                            NO_TIMESTAMP + (polarity << P_SHIFT) +
+                            (y << Y_SHIFT) + (x << X_SHIFT))
+                        data += pack("<I", packed)
+                    else:
+                        spikes.append((y * self.width) + x)
+                except:
+                    pass
+
+                
 
             if self.use_spif:
-                if available_data:
-                    sock.sendto(data, (self.ip_addr, self.spif_port))
-                    # if self.ev_count%1000 == 0:
-                    #     print(f"Event #{self.ev_count}  sent")
-                    available_data = False
+                sock.sendto(data, (self.ip_addr, self.spif_port))
                 
             elif spikes:
                 connection.send_spikes("retina", spikes)
@@ -149,5 +155,3 @@ class Stimulator:
         else:
             connection.close()
         print("No more events to be created")
-
-
