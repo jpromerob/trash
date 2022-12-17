@@ -19,6 +19,7 @@ import pyNN.spiNNaker as p
 P_SHIFT = 15
 Y_SHIFT = 0
 X_SHIFT = 16
+NO_TIMESTAMP = 0x80000000
 
 class Stimulator:
     def __init__(self, args, end_of_sim):
@@ -94,6 +95,7 @@ class Stimulator:
 
         if self.use_spif:
             print(f"Using SPIF on {self.ip_addr}:{self.spif_port}")
+            time.sleep(2)
             sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         else:
             connection = p.external_devices.SpynnakerLiveSpikesConnection(send_labels=["retina"], local_port=None)

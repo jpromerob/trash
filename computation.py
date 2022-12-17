@@ -131,8 +131,8 @@ class Computer:
         self.chip_coords = (0,0)
         self.x_shift = 16
         self.y_shift = 0
-        self.subheight = 2
-        self.subwidth = 4
+        self.subheight = min(8, int(self.width/2))
+        self.subwidth = min(2*self.subheight, self.width)
         self.use_spif = not args.simulate_spif
 
         # SpikeInjector Parameters
@@ -226,7 +226,8 @@ class Computer:
         print("\n\n\n")
         print(f"{self.ev_counter} events were output")
         print("\n\n\n")
-        pdb.set_trace()
+        time.sleep(2)
+        # pdb.set_trace()
         for i in range(4):
             self.voltages.append(np.asarray(self.onl[[i]].get_data("v").segments[0].filter(name="v")[0]).reshape(-1))
         # p.external_devices.run_forever(sync_time=0)

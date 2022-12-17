@@ -28,7 +28,7 @@ def parse_args():
     parser.add_argument('-z', '--zzz', type=int, help="sleep time ms", default=20)
 
     # SPIF Parameters
-    parser.add_argument('-i', '--ip', type= str, help="SPIF's IP address", default="172.16.223.122")
+    parser.add_argument('-i', '--ip', type= str, help="SPIF's IP address", default="172.16.223.2")
     parser.add_argument('-p', '--port', type=int, help="SPIF's port", default=3333)
     parser.add_argument('-s', '--simulate-spif', action="store_true", help="Simulate SPIF")
 
